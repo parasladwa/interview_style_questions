@@ -1,4 +1,4 @@
-
+'''--------warm up----------'''
 
 
 def sockMerchant(n, ar):
@@ -42,6 +42,27 @@ print(repeatedString('aba', 10))
 
 
 
+
+'''--------arrays----------'''
+
+    
+def hourglassSum(arr):
+    
+    
+    hourglass =  lambda i, j : arr[i][j] + arr[i][j+1] + arr[i][j+2] + 
+    arr[i+1][j+1] +
+    arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+                           
+    tot = 0  
+    
+    for i in range(0, 4):
+        for j in range(0, 4):
+            tot += hourglass(i, j)
+            print(tot)
+
+
+
+hourglassSum()
 
 
 
