@@ -19,15 +19,26 @@ def sockMerchant(n, ar):
     return count
 
 
-n = 9
-ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-sockMerchant(n, ar)
 
+def repeatedString(s, n):
+    count=0
+    
+    if "a" not in s:
+        return 0
+    
+    
+    for char in s:
+        if char =="a":
+            count+=1
 
+    count *= (n//len(s))
+    
+    for i in range(0, n % len(s)):
+        if s[i] == 'a':
+            count+=1
+    return count
 
-
-
-
+print(repeatedString('aba', 10))
 
 
 
