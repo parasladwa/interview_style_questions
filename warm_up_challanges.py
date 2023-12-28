@@ -38,7 +38,7 @@ def repeatedString(s, n):
             count+=1
     return count
 
-print(repeatedString('aba', 10))
+
 
 
 
@@ -47,22 +47,41 @@ print(repeatedString('aba', 10))
 
     
 def hourglassSum(arr):
+
+    def each_hourglass(i, j):
+        first = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+        second =          + arr[i+1][j+1]
+        third = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+        
+        return first+second+third
     
-    
-    hourglass =  lambda i, j : arr[i][j] + arr[i][j+1] + arr[i][j+2] + 
-    arr[i+1][j+1] +
-    arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
-                           
-    tot = 0  
-    
+    biggest = float('-inf')
     for i in range(0, 4):
         for j in range(0, 4):
-            tot += hourglass(i, j)
-            print(tot)
+            temp = each_hourglass(i, j)
+            if temp > biggest:
+                biggest = temp
+    return biggest
+        
 
 
 
-hourglassSum()
+def minimumBribes(q):
+    
+    
+    if q == q.sort():
+        print("sorted")
+        
+    return 0
+print(minimumBribes([2, 1, 5, 3, 4]))
+
+
+
+
+
+
+
+
 
 
 
