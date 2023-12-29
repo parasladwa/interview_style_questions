@@ -94,7 +94,6 @@ def minimumBribes(q):
     if chaos == False:
         print(sum(bribes))
 
-minimumBribes([2, 1, 5, 3, 4])
 
 
 
@@ -103,9 +102,20 @@ minimumBribes([2, 1, 5, 3, 4])
 
 
 
+def minimumSwaps(arr):
+    count =0 
 
-
-
+    for i, v in enumerate(arr):
+        
+        
+        if i+1!= v:
+            
+            
+            correct = arr.index(i+1)
+            
+            arr[i], arr[correct] = arr[correct], arr[i]
+            count+=1
+    return count
 
 
 
