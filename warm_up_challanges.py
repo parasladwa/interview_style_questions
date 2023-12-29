@@ -66,20 +66,46 @@ def hourglassSum(arr):
 
 
 def minimumBribes(q):
+    
 
-    q.insert(0, 0)
+    new = q[:]
+    new.sort()
     
-    bribes = 0
-    
-    for i, v in enumerate(q):
+    bribes = [0]*len(q)
+    while q!= new:
         
-        if v - i >2:
-            return "Too chaotic"
-        else:
-            bribes += v-i
-    return bribes
+        for i in range(0, len(q)-1):
+            
+            if q[i] == q[i+1]:
+                continue
+            
+            elif q[i] < q[i+1]:
+                continue
+            
+            else:
+                bribes[q[i]-1] += 1 
+                q[i], q[i+1] = q[i+1], q[i]
+    
+    chaos = False
+    for i in bribes:
+        if i  > 2:
+            print("Too chaotic")
+            chaos = True
+    if chaos == False:
+        print(sum(bribes))
 
 minimumBribes([2, 1, 5, 3, 4])
+
+
+
+
+
+
+
+
+
+
+
 
 
 
