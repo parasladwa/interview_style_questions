@@ -123,7 +123,17 @@ def minimumSwaps(arr):
 
 
 
+def arrayManipulation(n, queries):
+    
+    arr = [0]*n
+    
+    
+    for q in queries:
 
-
-
-
+        for i in range(q[0]-1, q[1]):
+            arr[i] += q[2]
+        print(arr)
+    print(max(arr))
+n = 5
+queries = [[1, 2, 100], [2, 5, 100], [3, 4, 100]]
+arrayManipulation(n, queries)
