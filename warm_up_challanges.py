@@ -164,4 +164,24 @@ def sherlockAndAnagrams(s):
         for j in range(i+1, len(s)):
             temp = s[i:j]
             
-sherlockAndAnagrams('abca')
+
+
+
+
+
+import random
+def sim():
+    s = random.randint(1, 6)
+    rolls = 1
+    while s%6!=0:
+        s += random.randint(1, 6)
+        rolls +=1
+    return rolls
+
+def one():
+    total = []
+    
+    for i in range(0, 10000):
+        total.append(sim())
+    print(sum(total)/len(total))
+one()
