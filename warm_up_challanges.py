@@ -122,8 +122,8 @@ def minimumSwaps(arr):
 
 
 
-
-def arrayManipulation(n, queries):
+#correct but can be optimised
+def arrayManipulation_slow(n, queries):
     
     arr = [0]*n
     
@@ -132,8 +132,36 @@ def arrayManipulation(n, queries):
 
         for i in range(q[0]-1, q[1]):
             arr[i] += q[2]
-        print(arr)
-    print(max(arr))
-n = 5
-queries = [[1, 2, 100], [2, 5, 100], [3, 4, 100]]
-arrayManipulation(n, queries)
+    return max(arr)
+
+
+    
+    
+    
+    
+    
+def reverseWords(s):
+    s=  s.split()
+    print(s)
+    new = []
+
+    for word in s:
+        new.insert(0, word)
+    print(new)
+
+
+
+#dictionary
+def checkMagazine(magazine, note):
+    words = dict()
+    
+    for word in magazine:
+        words[word] = words.get(word, 0) + 1
+    print(words)
+    
+def sherlockAndAnagrams(s):
+    for i in range(0, len(s)):
+        for j in range(i+1, len(s)):
+            temp = s[i:j]
+            
+sherlockAndAnagrams('abca')
