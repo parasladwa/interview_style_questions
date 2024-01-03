@@ -169,19 +169,30 @@ def sherlockAndAnagrams(s):
 
 
 
-import random
-def sim():
-    s = random.randint(1, 6)
-    rolls = 1
-    while s%6!=0:
-        s += random.randint(1, 6)
-        rolls +=1
-    return rolls
+#misc
 
-def one():
-    total = []
+
+
+
+
+def flippingBits(n):
+    total = 0
+    binary = '{:032b}'.format(1)
+
     
-    for i in range(0, 10000):
-        total.append(sim())
-    print(sum(total)/len(total))
-one()
+    for i, v in enumerate(reversed(binary)):
+        print(i, v)
+        
+        if int(v) == 0:
+            total += 2**i
+
+    print(total)
+    return total
+n = 2147483648
+flippingBits(n)
+
+
+
+
+
+
