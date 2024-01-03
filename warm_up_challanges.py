@@ -177,7 +177,7 @@ def sherlockAndAnagrams(s):
 
 def flippingBits(n):
     total = 0
-    binary = '{:032b}'.format(1)
+    binary = '{:032b}'.format(n)
 
     
     for i, v in enumerate(reversed(binary)):
@@ -186,13 +186,32 @@ def flippingBits(n):
         if int(v) == 0:
             total += 2**i
 
-    print(total)
     return total
-n = 2147483648
-flippingBits(n)
 
 
+def primality(n):
+    import math
+
+    if int(n) == 1:
+        return "Not prime"
+        
+    if n in [2,3,5,7,13]:
+        return "Prime"
+    
+    end = int(str(n)[-1])
+    if end%2==0 or end==0 or end==5:
+        return "Not prime"
+    
+    for i in range(3, math.ceil(n**0.5)+1):
+        if n%i==0:
+            return "Not prime"
+        
+    return "Prime"
+
+print(primality(101))
 
 
+listt = [30, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 907]
 
-
+for i in listt:
+    print(i, primality(i))
