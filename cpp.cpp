@@ -152,11 +152,11 @@ void staircase(int& n) {
 
 
 
-
+// somethings wrong here
 void miniMaxSum(std::vector<int>& arr) {
     long max = *std::max_element(arr.begin(), arr.end());
     long min = *min_element(arr.begin(), arr.end());
-    long long sum = std::accumulate(arr.begin(), arr.end(), 0);
+    long long int sum = std::accumulate(arr.begin(), arr.end(), 0);
     long out1 = sum-max;
     long out2 = sum-min;
     std::cout<< out1 << " " << out2;
