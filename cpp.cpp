@@ -163,24 +163,62 @@ void miniMaxSum(std::vector<int>& arr) {
 }
 
 
-int main(){
-    std::vector<int> vect = {1, 2, 3, 4, 5};
-    miniMaxSum(vect);
-    return 0;
+// int main(){
+//     std::vector<int> vect = {1, 2, 3, 4, 5};
+//     miniMaxSum(vect);
+//     return 0;
+// }
+
+
+
+
+int birthdayCakeCandles(std::vector<int>& candles) {
+    int max = *std::max_element(candles.begin(), candles.end());
+    int total = 0;
+    for (int i: candles){
+        if (i==max){
+            total++;
+        }
+    }
+
+    return total;
 }
 
+// int main(){
+//     std::vector<int> c = {1, 3, 1, 4, 5, 2, 5};
+//     int v = birthdayCakeCandles(c);
+    
+
+//     std::cout<<v;
+//     return 0;
+// }
 
 
 
 
 
+std::string timeConversion(std::string& s) {
 
+    if (s[s.size()-2] == A){
+        return s.substr(0, s.size()-2);
+    }
 
+    std::string trunc = s.substr(2, s.size()-4);
+    int hours = s.substr(0, 2);
+    hours+=12;
+    std::string hours;
+    
+    return hours+trunc;
 
+}
 
+int main(){
+    std::string s = "07:05:45PM";
 
-
-
+    std::string ads = timeConversion(s);
+    std::cout<<ads;
+    return 0;
+}
 
 
 
