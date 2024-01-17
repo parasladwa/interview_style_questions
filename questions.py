@@ -207,3 +207,18 @@ def primality(n):
             return "Not prime"
         
     return "Prime"
+
+
+
+
+
+
+
+#CSES ferris wheel
+def
+
+
+
+
+
+
