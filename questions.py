@@ -214,11 +214,14 @@ def primality(n):
 
 
 
-#CSES ferris wheel
-def
+#codewars
+def descending_order(nums):
+    
+    s = list(str(nums))
+    
+    s.sort(reverse = True)
+    return ''.join(s)
 
 
 
-
-
-
+print(descending_order(25132))
