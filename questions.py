@@ -220,7 +220,7 @@ def descending_order(nums):
     s = list(str(nums))
     
     s.sort(reverse = True)
-    return ''.join(s)
+    return int(''.join(s))
 
 
 
