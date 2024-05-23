@@ -224,4 +224,20 @@ def descending_order(nums):
 
 
 
-print(descending_order(25132))
+# print(descending_order(25132))
+
+
+
+def timeConversion(s):
+    
+    if s[-2] == 'A':
+        return s[:-2]
+
+    else:
+        num = int(s[:2])+12
+        new = str(num)+ s[2:-2]
+        return new
+
+
+s = '07:05:45PM'
+print(timeConversion(s))

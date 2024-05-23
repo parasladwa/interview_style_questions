@@ -72,6 +72,7 @@ int game_second(){
 
     while (checker(guesses, rand)) {
         std::cout << "enter a guess :";
+        std::vector::insert(guess);
         std::cin >> guess;
         if(guess > rand){
             condition = "lower";
